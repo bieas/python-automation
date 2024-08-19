@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/flip-automation.iml" filepath="$PROJECT_DIR$/.idea/flip-automation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/python-automation.iml" filepath="$PROJECT_DIR$/.idea/python-automation.iml" />
     </modules>
   </component>
 </project>

@@ -15,5 +15,5 @@ Feature: Weather Forecast And Air Polution
     Then the response status code should be 200
     And the response should contain the key "list.0.main.aqi" with value containing "5"
     And the response should contain the key "list.0" with value containing "components"
-    And the response should match the expected JSON schema from "air_pollution.json"
+    And the response should match the expected JSON schema from "air_pollution_schema.json"
 

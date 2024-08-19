@@ -41,22 +41,23 @@ Feature: User Information Page
     And user fill in field_phone_number with "<phone>"
     And user fill in field_dob with "<dob>"
     And user click field_province
-    And user click dki_province_option
+    And user click <option_province>
     And user wait 5 seconds until "Select a city" visible in field_city
     And user click field_city
-    And user click city_option_1
+    And user click <option_city>
     And user click submit_button
     Then verify should be contain "<first>"
     And verify should be contain "<middle>"
     And verify should be contain "<last>"
     And verify should be contain "<email>"
     And verify should be contain "<phone>"
-    And verify should be contain "11 Mei 1994"
-    And verify should be contain "DKI Jakarta"
-    And verify should be contain "Jakarta Barat"
+    And verify should be contain "<verify_dob>"
+    And verify should be contain "<verify_province>"
+    And verify should be contain "<verify_city>"
     And close_button should be displayed
     Examples:
-      | first | middle | last   | email          | phone      | dob        |
-      | bieas | kultur | sadewo | bieas@mail.com | 1231231231 | 11/05/1994 |
+      | first | middle | last   | email             | phone      | dob        | option_province        | option_city   | verify_dob      | verify_province | verify_city   |
+      | bieas | kultur | sadewo | bieas@mail.com    | 1231231231 | 11/05/1994 | dki_province_option    | city_option_1 | 11 Mei 1994     | DKI Jakarta     | Jakarta Barat |
+      | test  | flip   | bisa   | bisadong@mail.com | 0892737127 | 17/08/1994 | jateng_province_option | city_option_1 | 17 Agustus 1994 | Jawa Tengah     | Semarang      |
 
 
