@@ -1,0 +1,227 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "cod": {
+      "type": "string"
+    },
+    "message": {
+      "type": "integer"
+    },
+    "cnt": {
+      "type": "integer"
+    },
+    "list": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "dt": {
+              "type": "integer"
+            },
+            "main": {
+              "type": "object",
+              "properties": {
+                "temp": {
+                  "type": "number"
+                },
+                "feels_like": {
+                  "type": "number"
+                },
+                "temp_min": {
+                  "type": "number"
+                },
+                "temp_max": {
+                  "type": "number"
+                },
+                "pressure": {
+                  "type": "integer"
+                },
+                "sea_level": {
+                  "type": "integer"
+                },
+                "grnd_level": {
+                  "type": "integer"
+                },
+                "humidity": {
+                  "type": "integer"
+                },
+                "temp_kf": {
+                  "type": "number"
+                }
+              },
+              "additionalProperties": true,
+              "required": [
+                "temp",
+                "feels_like",
+                "temp_min",
+                "temp_max",
+                "pressure",
+                "sea_level",
+                "grnd_level",
+                "humidity",
+                "temp_kf"
+              ]
+            },
+            "weather": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "main": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "icon": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": true,
+                  "required": [
+                    "id",
+                    "main",
+                    "description",
+                    "icon"
+                  ]
+                }
+              ]
+            },
+            "clouds": {
+              "type": "object",
+              "properties": {
+                "all": {
+                  "type": "integer"
+                }
+              },
+              "additionalProperties": true,
+              "required": [
+                "all"
+              ]
+            },
+            "wind": {
+              "type": "object",
+              "properties": {
+                "speed": {
+                  "type": "number"
+                },
+                "deg": {
+                  "type": "integer"
+                },
+                "gust": {
+                  "type": "number"
+                }
+              },
+              "additionalProperties": true,
+              "required": [
+                "speed",
+                "deg",
+                "gust"
+              ]
+            },
+            "visibility": {
+              "type": "integer"
+            },
+            "pop": {
+              "type": "integer"
+            },
+            "sys": {
+              "type": "object",
+              "properties": {
+                "pod": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": true,
+              "required": [
+                "pod"
+              ]
+            },
+            "dt_txt": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": true,
+          "required": [
+            "dt",
+            "main",
+            "weather",
+            "clouds",
+            "wind",
+            "visibility",
+            "pop",
+            "sys",
+            "dt_txt"
+          ]
+        }
+      ]
+    },
+    "city": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "coord": {
+          "type": "object",
+          "properties": {
+            "lat": {
+              "type": "number"
+            },
+            "lon": {
+              "type": "number"
+            }
+          },
+          "additionalProperties": true,
+          "required": [
+            "lat",
+            "lon"
+          ]
+        },
+        "country": {
+          "type": "string"
+        },
+        "population": {
+          "type": "integer"
+        },
+        "timezone": {
+          "type": "integer"
+        },
+        "sunrise": {
+          "type": "integer"
+        },
+        "sunset": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": true,
+      "required": [
+        "id",
+        "name",
+        "coord",
+        "country",
+        "population",
+        "timezone",
+        "sunrise",
+        "sunset"
+      ]
+    }
+  },
+  "additionalProperties": true,
+  "required": [
+    "cod",
+    "message",
+    "cnt",
+    "list",
+    "city"
+  ]
+}
