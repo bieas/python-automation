@@ -8,7 +8,7 @@ Feature: Weather Forecast And Air Polution
     And the response should contain the key "city.name" with value containing "Jakarta Special Capital Region"
     And the response should match the expected JSON schema from "weather_api_schema.json"
 
-  @e2e-api @all @api2
+  @e2e-api @all @api2 @test
   Scenario: Verify Get current air pollution of Jakarta Selatan
     Given I have the API endpoint "ENDPOINT_AIR_POLLUTION" with param {"lat": "-6.225772", "lon": "106.858182"}
     When I send a GET request to the forecast API
