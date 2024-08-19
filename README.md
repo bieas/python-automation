@@ -7,15 +7,13 @@ This automation will be covered :
 
 ## Prerequisite
 
-**pycharm** - used for your playground
+**pycharm** - used for your playground, [here](https://www.jetbrains.com/pycharm/download/?section=mac)
 
 Install **python** first in your computer, [here](https://www.python.org/) 
 
 
 
 ### Installation
-
-Install **python** first in your computer, [here](https://www.python.org/) 
 
 
 run command in pycharm terminal to install **behave**
