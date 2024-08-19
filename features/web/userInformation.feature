@@ -1,6 +1,6 @@
 Feature: User Information Page
 
-  @tag1 @uispec @all
+  @uispec @uispec1 @all
   Scenario: verify layout component user information page
     Given user directs to user information page "https://flip-sample-form.onrender.com"
     Then field_title should be displayed
@@ -16,7 +16,7 @@ Feature: User Information Page
     And field_city should be displayed
     And submit_button should be displayed
 
-  @tag2 @uispec @all
+  @uispec @uispec2 @all
   Scenario: verify validation component in user information page
     Given user directs to user information page "https://flip-sample-form.onrender.com"
     When user click submit_button
@@ -29,7 +29,7 @@ Feature: User Information Page
     And validation_province should be displayed
     And validation_city should be displayed
 
-  @tag3 @e2e @all
+  @e2e-web @all
   Scenario Outline: ensure user can submit user information
     Given user directs to user information page "https://flip-sample-form.onrender.com"
     When user click field_title
