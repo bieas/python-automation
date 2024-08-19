@@ -22,6 +22,25 @@ run command in pycharm terminal to install **behave**
 ```
 
 And install all of package 
+
+### Directory Tree
+```
+My Project
+├── config
+│   └── endpoints.py
+├── features
+│   ├── api
+│   │   └── file_api.feature
+│   ├── web
+│   │   └── file_web.feature
+│   └── steps
+│       ├── step_def_api.py
+│       └── step_def_web.py  
+├── schemas
+│   └── schema.json
+├── .env
+└── locator.py  
+```
     
 ### How to Run
 
