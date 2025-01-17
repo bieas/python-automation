@@ -1,17 +1,16 @@
-
 from selenium import webdriver
 from behave import given, when, then
 from locators import *
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 
-
 driver = webdriver.Chrome()
 
-@given('user directs to user information page "{url}"')
+@given('user directs to url page "{url}"')
 def direct_to_url(context, url):
     driver.get(url)
     driver.maximize_window()
+    driver.implicitly_wait(3)
 
 @then('{element} should be displayed')
 def is_displayed(context, element):
